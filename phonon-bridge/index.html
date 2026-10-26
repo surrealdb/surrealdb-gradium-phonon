@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Phonon bridge</title>
+		<style>
+			:root {
+				color-scheme: dark;
+				font-family: ui-sans-serif, system-ui, sans-serif;
+			}
+			body {
+				margin: 0;
+				padding: 24px;
+				background: #0b0a10;
+				color: #e8e6f0;
+			}
+			body.embedded {
+				padding: 0;
+				background: transparent;
+			}
+			body.embedded main {
+				display: none;
+			}
+			main {
+				max-width: 720px;
+				margin: 0 auto;
+				display: grid;
+				gap: 12px;
+			}
+			textarea {
+				min-height: 120px;
+				padding: 12px;
+				border-radius: 8px;
+				border: 1px solid #2c2838;
+				background: #15131c;
+				color: inherit;
+				font: inherit;
+			}
+			.row {
+				display: flex;
+				gap: 8px;
+			}
+			button {
+				padding: 8px 16px;
+				border-radius: 8px;
+				border: 0;
+				background: #ff00a0;
+				color: white;
+				font: inherit;
+				cursor: pointer;
+			}
+			button.secondary {
+				background: #2c2838;
+			}
+			pre {
+				margin: 0;
+				padding: 12px;
+				min-height: 200px;
+				border-radius: 8px;
+				background: #15131c;
+				font-size: 12px;
+				white-space: pre-wrap;
+				word-break: break-all;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Phonon bridge</h1>
+			<p>
+				On-device TTS (Gradium Phonon) for the Expo research agent. The app loads this page in a
+				hidden WebView. Here you can test it on its own.
+			</p>
+			<textarea id="text">Research complete. Here are three things your notes agree on, and one open question worth chasing.</textarea>
+			<div class="row">
+				<button id="speak">Speak</button>
+				<button id="stop" class="secondary">Stop</button>
+			</div>
+			<pre id="log"></pre>
+		</main>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
