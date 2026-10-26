@@ -1,0 +1,44 @@
+{
+  "name": "research-agent-demo",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@surrealdb/memory": "1.0.0-alpha.11",
+    "expo": "~58.0.16",
+    "expo-asset": "~58.0.17",
+    "expo-audio": "~58.0.9",
+    "expo-constants": "~58.0.12",
+    "expo-crypto": "~58.0.7",
+    "expo-linking": "~58.0.13",
+    "expo-router": "~58.0.24",
+    "expo-status-bar": "~58.0.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-markdown-display": "^7.0.2",
+    "react-native-safe-area-context": "~5.10.1",
+    "react-native-screens": "~4.30.0",
+    "react-native-webview": "14.0.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "bridge": "npm --prefix phonon-bridge run dev",
+    "bridge:build": "npm --prefix phonon-bridge run build",
+    "bridge:model": "node phonon-bridge/scripts/fetch-model.mjs",
+    "smoke": "tsx --env-file=.env scripts/smoke-memory.mts",
+    "typecheck": "tsc --noEmit && npm --prefix phonon-bridge run typecheck",
+    "lint": "expo lint"
+  },
+  "private": true
+}
